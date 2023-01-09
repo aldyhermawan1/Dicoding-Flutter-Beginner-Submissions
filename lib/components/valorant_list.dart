@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:valorant_agents/screen/detail_screen.dart';
 
 import '../model/agent.dart';
 
@@ -18,7 +19,9 @@ class ValorantList extends StatelessWidget {
         final Agent agent = agents![index];
         return InkWell(
           onTap: () {
-            // TODO Navigation Detail
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return DetailScreen(agent: agent);
+            }));
           },
           child: Card(
             child: Row(
@@ -31,7 +34,7 @@ class ValorantList extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 3,
+                  flex: 2,
                   child: Column(
                     children: [
                       Text(

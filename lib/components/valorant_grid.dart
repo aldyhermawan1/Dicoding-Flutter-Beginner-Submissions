@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/agent.dart';
+import '../screen/detail_screen.dart';
 
 class ValorantGrid extends StatelessWidget {
   final int grid;
@@ -23,7 +24,9 @@ class ValorantGrid extends StatelessWidget {
         children: agents!.map((e) {
           return InkWell(
             onTap: () {
-              // TODO Navigation
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return DetailScreen(agent: e);
+              }));
             },
             child: Card(
               child: Column(
