@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
                   child: DropdownButton(
                     isExpanded: true,
                     value: selectedRole,
-                    hint: const Text('Filter Role'),
+                    hint: const Text('Filter Roles'),
                     items: const [
                       DropdownMenuItem(
                         value: 'All',
